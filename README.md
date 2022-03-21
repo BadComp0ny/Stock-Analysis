@@ -16,7 +16,8 @@ improvements.  As this is involves stocks any improvement in compiling data can 
 
 One thing I noticed was that the code was looping between the worksheet with the data and the worksheet where the output was being stored repeatedly (once for each ticker).
 I also identified that the variables (totalVolume, startingPrice & endingPrice) were being saved and then written with each iteration of the *For i* step in the code. 
-![Image3](/Original_code.png)
+
+![Image3](/Original_Code.png)
 
 One area immediately identified as a possible improvement was in utilizing an array to temporarily store all data while on the specified data worksheet.
 This reduced the number of times the macro was going between worksheets (once for each ticker) to once total and the number of times it was having to overwrite stored values for the variables (totalVolume, startingPrice & endingPrice).
@@ -29,7 +30,7 @@ In doing this there was a significant increase in eficiency (88% improvement or 
 ![Image5](/Refactored_2017.png) 
 ![Image6](/Refactored_2018.png)
 
-##Summary
+## Summary
 The advantage of taking the time to refactor the code is immediately obvious in this example as it was able to reduce the time to resolution in excess of 88%. This reduces strain on the machine
 improves time to get results, and allows for a quicker analyis and potential investment.  
 
